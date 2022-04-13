@@ -1,108 +1,169 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Employee Clock in System
+(Developer: Devan Hayes)
+[Employee Clocking System Live](link for site goes here)
 
-Welcome USER_NAME,
+![Deployed Program](assets/images/)
+![Google Sheets Image](assets/images/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Tables of Contents
+1. [Project Goals](#project-goals)
+    1. [User Experience](#user-experience)
+    2. [Target Audience](#target-audience)
+    3. [User Stories](#user-stories)
+    4. [Business Owner Stories](#business-owner-stories)
+2. [Features](#features)
+    1. [feature1](#feature1)
+    2. [feature2](#feature2)
+    3. [feature3](#feature3)
+    4. [feature4](#feature4)
+    5. [feature5](#feature5)
+3. [User Input Validation](#user-input-validation)
+4. [Languages](#languages)
+5. [Frameworks and Tools](#frameworks-and-tools)
+6. [Bugs](#bugs)
+7. [Testing](#testing)
+8. [Validator Testing](#validator-testing)
+9. [Deployment](#deployment)
+10. [Credits](#credits)
 
-## Gitpod Reminders
+## Project Goals
+Employee Clock In System is a program that allows employees of a business to clock in and out. This facilitates the owners with the necessary data they need to track the employees' hours.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### User Experience
+The user first decides which option they would like to do, then a google sheet is updated with the data. 
 
-`python3 -m http.server`
+### Target Audience
+- Bussiness' that would like to track employee clock in and out times
 
-A blue button should appear to click: _Make Public_,
+### User Stories
+1. As a User I can view a paginated list of posts so that I can easily select a post to view
+2. As a User I can create posts so that share my concerns about my local area
+3. As a User I can leave comments on posts so that I can voice my opinion
+4. As a User I can upvote posts so that so I can help raise awareness of posts I agree with
+5. As a User I can mark my comment as a "Solution" so that so that others can easily see this is a solution to the issue
+6. As a User I can view comments of others so that I can read the conversation
+7. As a User I can click on a post so that I can view the full text
+8. As a User I can register an account so that I can comment and like
+9. 
 
-Another blue button should appear to click: _Open Browser_.
+### Business Owner Stories
+1. As a Site Admin I can create, read, update and delete posts so that I can manage my page content
+2. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Features
+### feature1
+- The options menu has four options to choose from.
+    - Option one allows the user to clock in by entering their employee number.
+    - Option two allows the user to clock out.
+    - Option three allows the user to add new employees to the list of current employees
+    - Option four allows the user to quit running the program.
 
-A blue button should appear to click: _Make Public_,
+![feature image](assets/images/)
 
-Another blue button should appear to click: _Open Browser_.
+### feature2
+- The clock-in option allows an existing employee to enter their employee number.
+- The nubmer runs through a validation function to check the correct lenght of the number entered.
+- This then creates a new row in the Google Sheet (employee_clocking_system) and inputs the employees number, name and time of clock in.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![feature image](assets/images/readme_images/clocking_in_system.PNG)
 
-To log into the Heroku toolbelt CLI:
+### feature3
+-The clock-out option allows a user who has already clocked in to add a clock-out time to the row created in the clock-in section (Google Sheets)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![feature image](assets/images/readme_images/clocking_out.PNG)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### feature4
+- This option allows the user to add a new employee to the list.
+    - First the user is prompted to enter a user name.
+    - Next the user is prompted to add the hourly rate of the new employee.
+    - Finally the new user is assigned an employee number and a new employee has been successfully added to the list
 
-------
+![feature image](assets/images/readme_images/adding_new_employee.PNG)
 
-## Release History
+### feature5
+- The User Feedback option allows the user to give feedback.
+- The user enters their feedback and the user_feedback worksheet in google sheets is updated
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+![feature image](assets/images/readme_images/user_feedback.PNG)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### feature6
+- The Exit option allows the user to end the program.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## feature7
+- The input validation checks has the user entered valid data and the correct amount of digits.
+- If the incorrect amount of digits is entered the user an error message will be displayed in the terminal.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+![feature image](assets/images/readme_images/user_input_validation_count.PNG)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- Input validation checks if alphabetical characters have been used.
+- If alphabetical characters are used instead of numbers an error message will be displayed in the terminal. 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![feature image](assets/images/readme_images/user_input_validation_alphabetical.PNG)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- Input validation checks if special characters and spaces are used.
+- If special characters are used an error message will be displayed in the terminal. 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![feature image](assets/images/readme_images/special_character_validation.PNG)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Languages
+- Python 3
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Frameworks and Tools
+- gitHub
+- Gitpod
+- Git
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Libraries 
+- The gspread library is used to interact with google sheets.
+- The sys library is used for the exit function in the program.
+- The time library is used to make time stamps for the employees cloking in and out.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Bugs
+| **Feature / Function** | **Expected Result** | **Actual Result** | **Action** |
+|-------------|------------|---------------------|-------------------|
+| Fill in function here | Fill in expected result here | Fill in Actual result here | Fill in action to resolve issue here|
+| Fill in function here | Fill in expected result here | Fill in Actual result here | Fill in action to resolve issue here|
+| Fill in function here | Fill in expected result here | Fill in Actual result here | Fill in action to resolve issue here|
+| Fill in function here | Fill in expected result here | Fill in Actual result here | Fill in action to resolve issue here|
+| Fill in function here | Fill in expected result here | Fill in Actual result here | Fill in action to resolve issue here|
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Testing
 
-------
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Fill in feature here | Fill in action to resolve issue here |  Fill in expected result here |Fill in Actual result here |
+| Fill in feature here | Fill in action to resolve issue here |  Fill in expected result here |Fill in Actual result here |
+| Fill in feature here | Fill in action to resolve issue here |  Fill in expected result here |Fill in Actual result here |
+| Fill in feature here | Fill in action to resolve issue here |  Fill in expected result here |Fill in Actual result here |
+| Fill in feature here | Fill in action to resolve issue here |  Fill in expected result here |Fill in Actual result here |
 
-## FAQ about the uptime script
+## Validator Testing 
+### PEP8 Validation
+- The PEP8 Valitator has resulted in no errors or warnings
 
-**Why have you added this script?**
+![PEP8 Validator](assets/images/)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+## Deployment
+Heroku was used for the deployment of this program.
+1. In the workspace terminal command line: "pip3 freeze > requirements.txt"
+2. Create account on Heroku
+3. On the dashboard page, select "create new app"
+4. Click create app
+5. Go to the "settings" tab, find "Config Vars" enter "Creds" into the key field and copy the contents for the creds.json file into the value field
+6. In setting find add buid packs to app
+    1. python
+    2. node.js
+6. Scroll up to the navigation menu and find "deploy", select GitHub as deployment method
+7. In the Deployment Method section select Gitub or connect to GitHub
+8. In the "Connect to GitHub, searh the desired repository
+9. Enable automatic deploys and then deploy branch
+10. Once deployed click on "View" to open aplication
 
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+## Credits
+### Code
+- To implement time into the program I used https://www.programiz.com/python-programming/datetime/current-time 
+- To find additonal features working with Google Sheets I used https://www.youtube.com/watch?v=yPQ2Gk33b1U&ab_channel=PrettyPrinted 
+- To validate user input I used the isdigit() function found from https://pynative.com/python-check-user-input-is-number-or-string/#:~:text=To%20check%20if%20the%20input%20string%20is%20an%20integer%20number,using%20the%20int()%20constructor.&text=To%20check%20if%20the%20input%20is%20a%20float%20number%2C%20convert,using%20the%20float()%20constructor.
