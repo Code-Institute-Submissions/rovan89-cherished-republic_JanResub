@@ -2,8 +2,8 @@
 (Developer: Devan Hayes)
 [Employee Clocking System Live](link for site goes here)
 
-![Deployed Program](assets/images/)
-![Google Sheets Image](assets/images/)
+![Deployed Program]()
+![Google Sheets Image]()
 
 
 ## Tables of Contents
@@ -59,19 +59,19 @@ The user first decides which option they would like to do, then a google sheet i
     - Option three allows the user to add new employees to the list of current employees
     - Option four allows the user to quit running the program.
 
-![feature image](assets/images/)
+![feature image]()
 
 ### feature2
 - The clock-in option allows an existing employee to enter their employee number.
 - The nubmer runs through a validation function to check the correct lenght of the number entered.
 - This then creates a new row in the Google Sheet (employee_clocking_system) and inputs the employees number, name and time of clock in.
 
-![feature image](assets/images/readme_images/clocking_in_system.PNG)
+![feature image]()
 
 ### feature3
 -The clock-out option allows a user who has already clocked in to add a clock-out time to the row created in the clock-in section (Google Sheets)
 
-![feature image](assets/images/readme_images/clocking_out.PNG)
+![feature image]()
 
 ### feature4
 - This option allows the user to add a new employee to the list.
@@ -79,13 +79,13 @@ The user first decides which option they would like to do, then a google sheet i
     - Next the user is prompted to add the hourly rate of the new employee.
     - Finally the new user is assigned an employee number and a new employee has been successfully added to the list
 
-![feature image](assets/images/readme_images/adding_new_employee.PNG)
+![feature image]()
 
 ### feature5
 - The User Feedback option allows the user to give feedback.
 - The user enters their feedback and the user_feedback worksheet in google sheets is updated
 
-![feature image](assets/images/readme_images/user_feedback.PNG)
+![feature image]()
 
 ### feature6
 - The Exit option allows the user to end the program.
@@ -95,17 +95,17 @@ The user first decides which option they would like to do, then a google sheet i
 - The input validation checks has the user entered valid data and the correct amount of digits.
 - If the incorrect amount of digits is entered the user an error message will be displayed in the terminal.
 
-![feature image](assets/images/readme_images/user_input_validation_count.PNG)
+![feature image]()
 
 - Input validation checks if alphabetical characters have been used.
 - If alphabetical characters are used instead of numbers an error message will be displayed in the terminal. 
 
-![feature image](assets/images/readme_images/user_input_validation_alphabetical.PNG)
+![feature image]()
 
 - Input validation checks if special characters and spaces are used.
 - If special characters are used an error message will be displayed in the terminal. 
 
-![feature image](assets/images/readme_images/special_character_validation.PNG)
+![feature image]()
 
 
 ## Languages
@@ -144,7 +144,7 @@ The user first decides which option they would like to do, then a google sheet i
 ### PEP8 Validation
 - The PEP8 Valitator has resulted in no errors or warnings
 
-![PEP8 Validator](assets/images/)
+![PEP8 Validator]()
 
 ## Deployment
 Heroku was used for the deployment of this program.
@@ -166,4 +166,3 @@ Heroku was used for the deployment of this program.
 ### Code
 - To implement time into the program I used https://www.programiz.com/python-programming/datetime/current-time 
 - To find additonal features working with Google Sheets I used https://www.youtube.com/watch?v=yPQ2Gk33b1U&ab_channel=PrettyPrinted 
-- To validate user input I used the isdigit() function found from https://pynative.com/python-check-user-input-is-number-or-string/#:~:text=To%20check%20if%20the%20input%20string%20is%20an%20integer%20number,using%20the%20int()%20constructor.&text=To%20check%20if%20the%20input%20is%20a%20float%20number%2C%20convert,using%20the%20float()%20constructor.
