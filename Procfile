@@ -1,1 +1,1 @@
-web: gunicorn cherished-republic.wigi
+web: gunicorn cherished_republic.wigi
