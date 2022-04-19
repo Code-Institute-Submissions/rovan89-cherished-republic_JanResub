@@ -123,6 +123,7 @@ The user first decides which option they would like to do, then a google sheet i
 - PostgreSQL for the database
 - Psycopg2 to connect to PostgreSQL
 - DJ3 Cloudinary Storage
+- Summernote
 
 ## Bugs
 | **Feature / Function** | **Expected Result** | **Actual Result** | **Action** |
