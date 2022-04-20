@@ -44,12 +44,13 @@ The user first decides which option they would like to do, then a google sheet i
 5. As a User I can mark my comment as a "Solution" so that so that others can easily see this is a solution to the issue
 6. As a User I can view comments of others so that I can read the conversation
 7. As a User I can click on a post so that I can view the full text
-8. As a User I can register an account so that I can comment and like
-9. 
+8. As a User I can register an account so that I can comment and like posts
+9. As a User I can create a community project so that other users can join and help solve the given issue
+10. As a Creator of a project I can create tasks in the project so that other users can assign themselves to a task
 
 ### Business Owner Stories
 1. As a Site Admin I can create, read, update and delete posts so that I can manage my page content
-2. 
+2. As a Site Admin I can approve projects so that the community is safe from spam and unwanted posts
 
 ## Features
 ### feature1
