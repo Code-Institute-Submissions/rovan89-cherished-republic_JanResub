@@ -5,4 +5,4 @@ from django.http import HttpResponse
 
 class taskList(generic.ListView):
     model = ToDoList
-    template_name = 'todo-list.html'
+    template_name = 'todo_list.html'
