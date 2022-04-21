@@ -28,7 +28,7 @@
 10. [Credits](#credits)
 
 ## Project Goals
-Employee Clock In System is a program that allows employees of a business to clock in and out. This facilitates the owners with the necessary data they need to track the employees' hours.
+
 
 ### User Experience
 The user first decides which option they would like to do, then a google sheet is updated with the data. 
@@ -157,10 +157,9 @@ Heroku was used for the deployment of this program.
 2. Create account on Heroku
 3. On the dashboard page, select "create new app"
 4. Click create app
-5. Go to the "settings" tab, find "Config Vars" enter "Creds" into the key field and copy the contents for the creds.json file into the value field
-6. In setting find add buid packs to app
+5. Go to the "settings" tab, find "Config Vars" completed the foloowing convig vars: CLOUDINARY_URL, DATABASE_URL, DISABLE_COLLECTSTATIC and SECRET_KEY
+6. In settings find add buid packs to app
     1. python
-    2. node.js
 6. Scroll up to the navigation menu and find "deploy", select GitHub as deployment method
 7. In the Deployment Method section select Gitub or connect to GitHub
 8. In the "Connect to GitHub, searh the desired repository
