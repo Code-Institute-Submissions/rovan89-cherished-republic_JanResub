@@ -22,5 +22,6 @@ import todo.urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
-    path('', include('todo.urls'), name='todo_urls'),
+    path('', include('blog.urls'), name='blog_urls'),
+    path('#', include('todo.urls'), name='todo_urls'),
 ]
