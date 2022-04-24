@@ -6,6 +6,19 @@
         <div class="col-12 mt-2">
             <div class="row">
                 {% for post in post_list %}
+                    <div class="col-md-12">
+                        <div class="card md-12">
+                            <div class="card-body">
+                                Hi
+                            </div>
+                        </div>
+                    </div>
+
+                {% if forloop.counter|divisibleby:1  %}
+                </div>
+                <div class="row">
+                {% endif %}
+
                 {% endfor %}
             </div>
         </div>
