@@ -4,13 +4,24 @@
 <h1>1 This is the index template</h1>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 mt-2">
+        <div class="col-12 mt-1 mb-1">
             <div class="row"> 
                 {% for post in post_list %}
                     <div class="col-md-12 mt-2">
                         <div class="card md-12">
                             <div class="card-body">
-                                {{ post }}
+                                <div>
+                                    <p>Posted by: {{ post.author }}</p>
+                                </div>
+                                <div>
+                                    <p>Created on: {{ post.created_on }}</p>
+                                </div>
+                                <div>
+                                    <h2>{{ post }}</h2>
+                                </div>
+                                <div>
+                                    <p>{{ post.content }}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
