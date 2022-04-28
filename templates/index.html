@@ -8,21 +8,20 @@
             <div class="row"> 
                 {% for post in post_list %}
                     <div class="col-md-12 mt-2">
-                        <div class="card md-12">
-                            <div class="card-body">
-                                <div>
-                                    <p>Posted by: {{ post.author }}</p>
+                        <div class="card md-12 post_container bg-info">
+                            <a href="{% url 'post_detail' post.slug  %}" class="post-link">
+                                <div class="card-body">
+                                    <div>
+                                        <p>Posted by: {{ post.author }}</p>
+                                    </div>
+                                    <div>
+                                        <p>Created on: {{ post.created_on }}</p>
+                                    </div>
+                                    <div>
+                                        <h2>{{ post }}</h2>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p>Created on: {{ post.created_on }}</p>
-                                </div>
-                                <div>
-                                    <h2>{{ post }}</h2>
-                                </div>
-                                <div>
-                                    <p>{{ post.content }}</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <br>
