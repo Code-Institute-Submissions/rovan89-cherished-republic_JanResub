@@ -1,11 +1,21 @@
-body {
-    background-color: red;
+
+/* Post Container */
+
+.post_container{
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
+    transition: transform .2s;
 }
 
-.navbar {
-    color: pink;
+.post_container:hover{
+    transform: scale(1.01);
 }
 
-.main-content-container-base-html {
-    border-radius: 50%;
+.post-link{
+    text-decoration: none;
+    transition: transform .2s;
 }
+
+.post-link:hover{
+    text-decoration: none;
+}
+
