@@ -23,13 +23,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="main_feed.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Features</a>
+                        <a class="nav-link" href="post_detail.html">Features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="todo_list.html">Pricing</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#">Disabled</a>
@@ -38,7 +38,16 @@
             </div>
         </nav>
     </header>
+    <!-- This if statement holds alert messages -->
+    {% if messages %}
+        {% for message in messages %}
 
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+        
+        {% endfor%}
+    {% endif %}
     <!-- Overall Content Container -->
     <section class="container-fluid my-4 ">
         <div class="container ">
@@ -46,9 +55,10 @@
 
                 <!-- Main Content Container-->
                 <main class="col-12 col-lg-8 p-2 m-2 main-content-container-base-html bg-primary">
-                    {% block content %}
 
+                    {% block content %}
                     {% endblock content %}
+                    
                 </main>
 
                 <div class="col-3 d-none d-lg-block p-2 m-2 justify-content-right bg-success">
