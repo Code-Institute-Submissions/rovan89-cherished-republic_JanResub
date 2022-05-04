@@ -129,7 +129,7 @@ The user first decides which option they would like to do, then a google sheet i
 ## Bugs
 | **Feature / Function** | **Expected Result** | **Actual Result** | **Action** |
 |-------------|------------|---------------------|-------------------|
-| Fill in function here | Fill in expected result here | Fill in Actual result here | Fill in action to resolve issue here|
+| Register function in user/views.py | To register a user and redirect the user back to the home page | Page not found (404) | Fixed url path to point at home page |
 | Fill in function here | Fill in expected result here | Fill in Actual result here | Fill in action to resolve issue here|
 | Fill in function here | Fill in expected result here | Fill in Actual result here | Fill in action to resolve issue here|
 | Fill in function here | Fill in expected result here | Fill in Actual result here | Fill in action to resolve issue here|
