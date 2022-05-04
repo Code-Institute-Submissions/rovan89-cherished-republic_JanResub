@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
-
+from .forms import NewUserForm
 
 
 
@@ -11,12 +11,12 @@ def register(request):
     The register function also checks if the account already exists.
     """
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = NewUserForm(request.POST)
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Account created for {username}')
             return redirect('home')
     else:
-        form = UserCreationForm()
+        form = NewUserForm()
     return render(request, 'users/register.html', {'form': form})
