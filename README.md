@@ -130,8 +130,8 @@ The user first decides which option they would like to do, then a google sheet i
 | **Feature / Function** | **Expected Result** | **Actual Result** | **Action** |
 |-------------|------------|---------------------|-------------------|
 | Register function in user/views.py | To register a user and redirect the user back to the home page | Page not found (404) | Fixed url path to point at home page |
-| Fill in function here | Fill in expected result here | Fill in Actual result here | Fill in action to resolve issue here|
-| Fill in function here | Fill in expected result here | Fill in Actual result here | Fill in action to resolve issue here|
+| To allow users to create and post comments | For the comment to be posted | HTTP ERROR 405 | The function was indented incorrectly |
+| In view.py the post function validates the comment | the comment should be validated | 'User' object has no attribute 'name' | Changed comment_form.instance.name = request.user.name to comment_form.instance.name = request.user.username|
 | Fill in function here | Fill in expected result here | Fill in Actual result here | Fill in action to resolve issue here|
 | Fill in function here | Fill in expected result here | Fill in Actual result here | Fill in action to resolve issue here|
 
