@@ -132,7 +132,7 @@ The user first decides which option they would like to do, then a google sheet i
 | Register function in user/views.py | To register a user and redirect the user back to the home page | Page not found (404) | Fixed url path to point at home page |
 | To allow users to create and post comments | For the comment to be posted | HTTP ERROR 405 | The function was indented incorrectly |
 | In view.py the post function validates the comment | the comment should be validated | 'User' object has no attribute 'name' | Changed comment_form.instance.name = request.user.name to comment_form.instance.name = request.user.username|
-| Fill in function here | Fill in expected result here | Fill in Actual result here | Fill in action to resolve issue here|
+| TodoItems get() menthod  | To return multiple items | Error raised: get() returned more than one ToDoList -- it returned 3! | Made change from get_object_or_404() to get_list_or_404()|
 | Fill in function here | Fill in expected result here | Fill in Actual result here | Fill in action to resolve issue here|
 
 ## Testing
