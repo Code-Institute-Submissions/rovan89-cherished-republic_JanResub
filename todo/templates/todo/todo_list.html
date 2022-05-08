@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="md-12 container">
+        <div class="row g-0">
+            <div class="col-md-12 masthead-text">
+
+                <h1> This is todo_list.html</h1>
+
+                {% for item in todo_item %}
+                    <div class="col md 4"> 
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                {{ item}}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
