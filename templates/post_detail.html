@@ -15,6 +15,8 @@
                         <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
                         <h1 class="post-title">{{ post.title }}</h1>
                         {{ post.content | safe }}
+                        <a type="button" class="btn btn-info" href="/update_post/{{ post.id }}">Edit</a>
+                        <a type="button" class="btn btn-danger" href="/delete_post/{{ post.id }}">Delete</a>
                     </p>
                     <div class="row">
                         <strong>
