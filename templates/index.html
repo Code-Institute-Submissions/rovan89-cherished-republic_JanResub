@@ -8,11 +8,11 @@
             <div class="row"> 
                 {% for post in post_list %}
                     <div class="col-md-12 mt-2">
-                        <div class="card md-12 post_container">
-                            <a href="{% url 'post_detail' post.slug  %}" class="post-link">
+                        <a href="{% url 'post_detail' post.slug  %}" class="post-link">
+                            <div class="card md-12 post_container">
                                 <div class="card-body">
                                     <div>
-                                        <p>Posted by: {{ post.author }}</p>
+                                        <p>Posted by: {{ post.author }} </p>
                                     </div>
                                     <div>
                                         <p>Created on: {{ post.created_on }}</p>
