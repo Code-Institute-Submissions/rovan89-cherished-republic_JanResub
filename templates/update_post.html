@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="md-12 container">
+        <div class="row g-0">
+            <div class="col-md-12 masthead-text">
+
+                <h1> Edit Post</h1>
+                <div>
+
+                    {% if posted %}
+                    <div class="alert alert-success" role="alert">
+                        Thanks for posting
+                    </div>
+                    {% else %}
+
+                        {% if user.is_authenticated %}
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{ form | crispy}}
+                            <button type="submit" name="update_post_submit_btn">Update Post</button>
+                        </form>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
