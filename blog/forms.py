@@ -1,13 +1,24 @@
-from .models import Comment
+from .models import Comment, Post
 from django import forms
+
 
 class CommentForm(forms.ModelForm):
     """
-    This class is the model for users comments.
-    It inherits from the Comment class in models.py
+    This is the for for user comments.
+    It class inherits from the Comment class in models.py
     """
+
     class Meta:
         model = Comment
         fields = ('body',)
 
+
+class UserPostForm(forms.ModelForm):
+    """
+    This is the form for user posts.
+    It class inherits from the Comment class in models.py
+    """
     
+    class Meta:
+        model = Post
+        fields = ['title', 'content', 'author']
