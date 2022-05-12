@@ -169,6 +169,8 @@ Heroku was used for the deployment of this program.
 10. Once deployed click on "View" to open aplication
 
 ## Credits
+- Hero Image by Freepik: freepik.com
+
 ### Code
 - To implement time into the program I used https://www.programiz.com/python-programming/datetime/current-time 
 - To find additonal features working with Google Sheets I used https://www.youtube.com/watch?v=yPQ2Gk33b1U&ab_channel=PrettyPrinted 
