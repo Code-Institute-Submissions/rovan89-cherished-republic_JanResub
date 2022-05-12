@@ -15,6 +15,9 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
+    upvote = models.IntegerField(default='0')
+    downvote = models.IntegerField(default='0')
+    votes = models.ManyToManyField(User, related_name='votes', default=None, blank=True)
 
     class Meta:
         ordering = ['-created_on']
@@ -46,4 +49,15 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+
+class UserVotes(models.Model):
+    """
+    This model tracks user vote on a post.
+
+    """
+
+    post = models.ForeignKey(Post, related_name='postid', on_delete=models.CASCADE, default=None, blank=True)
+    user = models.ForeignKey(User, related_name='postid', on_delete=models.CASCADE, default=None, blank=True)
+    vote = models.BooleanField(default=True)
 
