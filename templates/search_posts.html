@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Search Results</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 mt-1 mb-1">
+            <div class="row"> 
+                {% if searched %}
+                    <h2>Search results for {{ searched }}</h2>
+
+                    {% for post in posts %}
+                    <div class="col-md-12 mt-2">
+                        <a href="{% url 'post_detail' post.slug  %}" class="post-link">
+                            <div class="card md-12 post_container">
+                                <div class="card-body">
+                                    <div>
+                                        <p>Posted by: {{ post.author }} </p>
+                                    </div>
+                                    <div>
+                                        <p>Created on: {{ post.created_on }}</p>
+                                    </div>
+                                    <div>
+                                        <h2>{{ post.title }}</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+
+                {% else %}
+                    <h2>Your Search Request Was Empty</h2>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
