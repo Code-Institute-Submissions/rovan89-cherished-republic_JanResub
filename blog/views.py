@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
+from django.views.generic.list import ListView
 from django.http import HttpResponseRedirect
 from django.utils.text import slugify
+from django.contrib import messages
 from .models import Post
 from .forms import CommentForm, UserPostForm
 
@@ -29,6 +31,7 @@ def create_user_post(request):
             user_form = form.save(commit=False)
             user_form.slug = slugify(user_form.title)
             user_form.save()
+            messages.success(request, "Your post was created successfully")
             return redirect('home')
     return render(request, "create_post.html", context)
 
@@ -43,6 +46,7 @@ def update_user_post(request, post_id):
         form = UserPostForm(request.POST, instance=post)
         if form.is_valid():
             form.save()
+            messages.success(request, "Your post was updated successfully")
             return redirect('home')
     form = UserPostForm(instance=post)
     context = {
@@ -54,6 +58,7 @@ def update_user_post(request, post_id):
 def delete_post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     post.delete()
+    messages.success(request, "Your post was deleted successfully")
     return redirect('home')
 
 
@@ -106,6 +111,7 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
+            messages.info(request, "Your comment is awaiting approval")
         else:
             comment_form = CommentForm()
 
@@ -136,3 +142,16 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+def post_search(request):
+    if request.method == "POST":
+        searched = request.POST['searched']
+        posts = Post.objects.filter(title__icontains=searched)
+
+        return render(request, 'search_posts.html', {
+            'searched': searched,
+            'posts': posts
+        })
+    else:
+        return render(request, 'search_posts.html', {})
