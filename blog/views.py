@@ -9,6 +9,12 @@ from .forms import CommentForm, UserPostForm
 
 
 class PostList(generic.ListView):
+    """
+    This class contains a list of user posts.
+    The post are ordered by date of creation.
+    The posts are filtered by thier status.
+    """
+
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = "index.html"
@@ -56,6 +62,10 @@ def update_user_post(request, post_id):
 
 
 def delete_post(request, post_id):
+    """
+    This is the fuction for a user to delete a post.
+    """
+
     post = get_object_or_404(Post, id=post_id)
     post.delete()
     messages.success(request, "Your post was deleted successfully")
@@ -130,7 +140,7 @@ class PostDetail(View):
 
 class PostLike(View):
     """
-    
+    This class alllows users to like posts.
     """
     
     def post(self, request, slug):
@@ -144,7 +154,11 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
+
 def post_search(request):
+    """
+    This function allows users to search published post.
+    """
     if request.method == "POST":
         searched = request.POST['searched']
         posts = Post.objects.filter(title__icontains=searched)

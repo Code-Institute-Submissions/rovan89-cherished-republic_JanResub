@@ -5,7 +5,21 @@ from django.urls import reverse
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+class Profile(models.Model):
+    """
+    This a cumstome user profile class.
+    """
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    bio = models.TextField(max_length=500, default='Enter your bio here')
+
+    def __str__(self):
+        return str(self.user)
+
+
 class Post(models.Model):
+    """
+    This is the model for a post.
+    """
     title = models.CharField(max_length=250, unique=True)
     slug = models.SlugField(max_length=250, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
@@ -15,9 +29,7 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
-    upvote = models.IntegerField(default='0')
-    downvote = models.IntegerField(default='0')
-    votes = models.ManyToManyField(User, related_name='votes', default=None, blank=True)
+
 
     class Meta:
         ordering = ['-created_on']
@@ -35,7 +47,9 @@ class Post(models.Model):
         return reverse('home', args=(str(self.id)))
 
 class Comment(models.Model):
-
+    """
+    This is the model for comments.
+    """
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=100)
     email = models.EmailField()
@@ -51,13 +65,4 @@ class Comment(models.Model):
         return f"Comment {self.body} by {self.name}"
 
 
-class UserVotes(models.Model):
-    """
-    This model tracks user vote on a post.
-
-    """
-
-    post = models.ForeignKey(Post, related_name='postid', on_delete=models.CASCADE, default=None, blank=True)
-    user = models.ForeignKey(User, related_name='postid', on_delete=models.CASCADE, default=None, blank=True)
-    vote = models.BooleanField(default=True)
 
