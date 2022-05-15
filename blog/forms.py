@@ -1,5 +1,5 @@
-from .models import Comment, Post
 from django import forms
+from .models import Comment, Post
 
 
 class CommentForm(forms.ModelForm):
@@ -18,7 +18,6 @@ class UserPostForm(forms.ModelForm):
     This is the form for user posts.
     It class inherits from the Comment class in models.py
     """
-    
     class Meta:
         model = Post
         fields = ['title', 'content', 'author']

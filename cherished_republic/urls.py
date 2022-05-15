@@ -23,5 +23,4 @@ urlpatterns = [
     path('todo/', include('todo.urls'), name='todo_urls'),
     path('accounts/', include('allauth.urls')),
     path('', include('blog.urls'), name='blog_urls'),
-    
 ]

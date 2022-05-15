@@ -19,14 +19,14 @@
 <!-- Navigation -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Cherished Republic</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Cherished Republic</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="main_feed.html">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                     </li>
 
                     {% if user.is_authenticated %}
@@ -97,33 +97,25 @@
         <div class="container-fluid p-4 pb-0">
             <!-- Section: Social Media Icons -->
             <section class="mb-4">
-
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" role="button" target="_blank">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                <!-- Twitter-->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/home/" role="button" target="_blank">
                     <i class="fab fa-twitter"></i>
                 </a>
 
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-                    <i class="fab fa-google"></i>
-                </a>
-
                 <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" role="button" target="_blank">
                     <i class="fab fa-instagram"></i>
                 </a>
 
                 <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/" role="button" target="_blank">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
 
-                <!-- Github -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-                    <i class="fab fa-github"></i>
-                </a>
             </section>
 
         </div>
