@@ -9,14 +9,23 @@
             <div class="col-md-12 masthead-text">
 
                 <h1> Create Post</h1>
-                <div>
+                <div id="Create_post_instructions">
 
+                </div>
+                <h2>
+                    If you want to start a general discussion about your area this is the place for you.
+                </h2>
+                <p>
+                    We encourage constructive conversations to help better your local community. So please feel free to create a post and let's pull our community together.
+                </p>
+                <div>
+                     <!-- Message alert when user creates a successful post -->
                     {% if posted %}
                     <div class="alert alert-success" role="alert">
                         Thanks for posting
                     </div>
                     {% else %}
-
+                        <!-- Form for user posts -->
                         {% if user.is_authenticated %}
                         <form method="POST">
                             {% csrf_token %}
