@@ -28,13 +28,15 @@
 10. [Credits](#credits)
 
 ## Project Goals
-
+- To create a community driven site where people can come together and help thier local community become a better place.
+- To allow users to interact and organise event's, creat discussions about thier local area.
 
 ### User Experience
 The user first decides which option they would like to do, then a google sheet is updated with the data. 
 
 ### Target Audience
-- Bussiness' that would like to track employee clock in and out times
+- The target audience for this site are poeple who want to better thier community.
+- People who have ideas on how to improve their local area and need somewhere to share their thoughts.
 
 ### User Stories
 1. As a User I can view a paginated list of posts so that I can easily select a post to view
@@ -55,32 +57,38 @@ The user first decides which option they would like to do, then a google sheet i
 2. As a Site Admin I can approve projects so that the community is safe from spam and unwanted posts
 
 ## Features
-### feature1
-- The options menu has four options to choose from.
-    - Option one allows the user to clock in by entering their employee number.
-    - Option two allows the user to clock out.
-    - Option three allows the user to add new employees to the list of current employees
-    - Option four allows the user to quit running the program.
+### Home Page Post Display
+- The home page displays all user posts.  
+- These posts are ordered by date of creation.
+- Post on the main page display the author, when the post was created and the heading of the post.
+- Post on the main page are clickable and can open up the Post Detail page.
+ 
 
 ![feature image]()
 
-### feature2
-- The clock-in option allows an existing employee to enter their employee number.
-- The nubmer runs through a validation function to check the correct lenght of the number entered.
-- This then creates a new row in the Google Sheet (employee_clocking_system) and inputs the employees number, name and time of clock in.
+## Features
+### Start Discussion
+- The Start Discussion feature allows users to create discussion posts.
+- This is where user can post and raise awarnes of issues in their area.
 
 ![feature image]()
 
-### feature3
--The clock-out option allows a user who has already clocked in to add a clock-out time to the row created in the clock-in section (Google Sheets)
+### Post Detail View
+- When the post is clicked on the main page it opens the post detail view.
+- Post Detail user functions
+    - Users can comment on posts
+    - Users can like posts
+    - Users can edit post
+    - Users can delete posts
 
 ![feature image]()
 
-### feature4
-- This option allows the user to add a new employee to the list.
-    - First the user is prompted to enter a user name.
-    - Next the user is prompted to add the hourly rate of the new employee.
-    - Finally the new user is assigned an employee number and a new employee has been successfully added to the list
+### Registration
+- User can use the register link in the nave bar to be directed to the register form.
+- To register the user must fill out the following feilds:
+    - Username
+    - E-mail
+    - Password
 
 ![feature image]()
 
@@ -139,9 +147,9 @@ The user first decides which option they would like to do, then a google sheet i
 
 ## Testing
 
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| Fill in feature here | Fill in action to resolve issue here |  Fill in expected result here |Fill in Actual result here |
+| **Feature** | **Action** | **Expected Result** | **Manual Testing** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|--------------------|
+| Start Discussion | This allows users to be redirected to the create post page where they can create their own post and start a community discussion | The user fills out the form and the contents get saved to the data base and are rendered o the home page | This was tested by clicking the Start Discussion button, filling out the create post form, the clicking the post button | Works as expected | 
 | Fill in feature here | Fill in action to resolve issue here |  Fill in expected result here |Fill in Actual result here |
 | Fill in feature here | Fill in action to resolve issue here |  Fill in expected result here |Fill in Actual result here |
 | Fill in feature here | Fill in action to resolve issue here |  Fill in expected result here |Fill in Actual result here |
