@@ -1,9 +1,6 @@
-# Employee Clock in System
+# Cherished Repblic
 (Developer: Devan Hayes)
 [Employee Clocking System Live](link for site goes here)
-
-![Deployed Program]()
-![Google Sheets Image]()
 
 
 ## Tables of Contents
@@ -23,9 +20,8 @@
 5. [Frameworks and Tools](#frameworks-and-tools)
 6. [Bugs](#bugs)
 7. [Testing](#testing)
-8. [Validator Testing](#validator-testing)
-9. [Deployment](#deployment)
-10. [Credits](#credits)
+8. [Deployment](#deployment)
+9. [Credits](#credits)
 
 ## Project Goals
 - To create a community driven site where people can come together and help thier local community become a better place.
@@ -64,14 +60,10 @@ The user first decides which option they would like to do, then a google sheet i
 - Post on the main page are clickable and can open up the Post Detail page.
  
 
-![feature image]()
-
 ## Features
 ### Start Discussion
 - The Start Discussion feature allows users to create discussion posts.
 - This is where user can post and raise awarnes of issues in their area.
-
-![feature image]()
 
 ### Post Detail View
 - When the post is clicked on the main page it opens the post detail view.
@@ -81,7 +73,6 @@ The user first decides which option they would like to do, then a google sheet i
     - Users can edit post
     - Users can delete posts
 
-![feature image]()
 
 ### Registration
 - User can use the register link in the nave bar to be directed to the register form.
@@ -90,34 +81,15 @@ The user first decides which option they would like to do, then a google sheet i
     - E-mail
     - Password
 
-![feature image]()
-
-### feature5
-- The User Feedback option allows the user to give feedback.
-- The user enters their feedback and the user_feedback worksheet in google sheets is updated
-
-![feature image]()
+### Login
+- This feature allows users to login into their unique account
 
 ### feature6
 - The Exit option allows the user to end the program.
 
-
 ## feature7
 - The input validation checks has the user entered valid data and the correct amount of digits.
 - If the incorrect amount of digits is entered the user an error message will be displayed in the terminal.
-
-![feature image]()
-
-- Input validation checks if alphabetical characters have been used.
-- If alphabetical characters are used instead of numbers an error message will be displayed in the terminal. 
-
-![feature image]()
-
-- Input validation checks if special characters and spaces are used.
-- If special characters are used an error message will be displayed in the terminal. 
-
-![feature image]()
-
 
 ## Languages
 - Python 3
@@ -143,23 +115,18 @@ The user first decides which option they would like to do, then a google sheet i
 | To allow users to create and post comments | For the comment to be posted | HTTP ERROR 405 | The function was indented incorrectly |
 | In view.py the post function validates the comment | the comment should be validated | 'User' object has no attribute 'name' | Changed comment_form.instance.name = request.user.name to comment_form.instance.name = request.user.username|
 | TodoItems get() menthod  | To return multiple items | Error raised: get() returned more than one ToDoList -- it returned 3! | Made change from get_object_or_404() to get_list_or_404()|
-| Fill in function here | Fill in expected result here | Fill in Actual result here | Fill in action to resolve issue here|
 
 ## Testing
 
 | **Feature** | **Action** | **Expected Result** | **Manual Testing** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|--------------------|
 | Start Discussion | This allows users to be redirected to the create post page where they can create their own post and start a community discussion | The user fills out the form and the contents get saved to the data base and are rendered o the home page | This was tested by clicking the Start Discussion button, filling out the create post form, the clicking the post button | Works as expected | 
-| Fill in feature here | Fill in action to resolve issue here |  Fill in expected result here |Fill in Actual result here |
-| Fill in feature here | Fill in action to resolve issue here |  Fill in expected result here |Fill in Actual result here |
-| Fill in feature here | Fill in action to resolve issue here |  Fill in expected result here |Fill in Actual result here |
+| Edit Post | This allows users to edit posts on the site |  Users would click the edit button a be redirected to the edit post page | Click edit button, edit post click post button and update the database | Works as expected |
+| Delete Post | This allows users to delete posts on the site |  Users would click the delete button which would delete the post | Click delete button and update the database | Works as expected |
+| Like Post | The user can like any post on the website |  Click the like button once to like it and a second time to unlike it | | Works as expected |
+| Comments | Users can read comments from other users and add their own comments | Add test comment and see if it has updated the database | | Works as expected |
 | Fill in feature here | Fill in action to resolve issue here |  Fill in expected result here |Fill in Actual result here |
 
-## Validator Testing 
-### PEP8 Validation
-- The PEP8 Valitator has resulted in no errors or warnings
-
-![PEP8 Validator]()
 
 ## Deployment
 Heroku was used for the deployment of this program.
