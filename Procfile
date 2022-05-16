@@ -1,1 +1,1 @@
-web: gunicorn cherished_republic.wigi
+web: gunicorn cherished_republic.wsgi
