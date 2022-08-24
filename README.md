@@ -1,6 +1,6 @@
 # Cherished Repblic
 (Developer: Devan Hayes)
-[Employee Clocking System Live](link for site goes here)
+[Cherished Republic](https://cherished-republic.herokuapp.com/)
 
 
 ## Tables of Contents
@@ -9,19 +9,21 @@
     2. [Target Audience](#target-audience)
     3. [User Stories](#user-stories)
     4. [Business Owner Stories](#business-owner-stories)
-2. [Features](#features)
-    1. [feature1](#feature1)
-    2. [feature2](#feature2)
-    3. [feature3](#feature3)
-    4. [feature4](#feature4)
-    5. [feature5](#feature5)
-3. [User Input Validation](#user-input-validation)
-4. [Languages](#languages)
-5. [Frameworks and Tools](#frameworks-and-tools)
-6. [Bugs](#bugs)
-7. [Testing](#testing)
-8. [Deployment](#deployment)
-9. [Credits](#credits)
+2. [Design Choices](#design_choices)
+    1. [Wireframes](#wireframes)
+3. [Features](#features)
+    1. [Home Page Post Display](#home_page_post_display)
+    2. [Start Discussion](#start_discussion)
+    3. [Join Discussion](#join_discussion)
+    4. [Post Detail View](#post_detail_view)
+    5. [Registration](#registration)
+4. [User Input Validation](#user-input-validation)
+5. [Languages](#languages)
+6. [Frameworks and Tools](#frameworks-and-tools)
+7. [Bugs](#bugs)
+8. [Testing](#testing)
+9. [Deployment](#deployment)
+10. [Credits](#credits)
 
 ## Project Goals
 - To create a community driven site where people can come together and help thier local community become a better place.
@@ -47,10 +49,63 @@ The user first decides which option they would like to do, then a google sheet i
 10. As a User I can edit, update and delete posts so that I can manage my postings.
 11. As a Creator of a project I can create tasks in the project so that other users can assign themselves to a task
 
+![Image User Stoies Project](media/readme_images/cherished-republic-board.PNG)
+![Image User Stoies Project](media/readme_images/cherished-republic-user-stories.PNG)
 
 ### Business Owner Stories
 1. As a Site Admin I can create, read, update and delete posts so that I can manage my page content
 2. As a Site Admin I can approve projects so that the community is safe from spam and unwanted posts
+
+
+## Design Choices
+### Wireframes
+<details>
+<summary>Home Page</summary>
+<br>
+<summary>Desktop View</summary>
+<img src="media/readme_images/home-page-desktop-view.PNG">
+<hr>
+<br>
+<summary>Tablet View</summary>
+<img src="media/readme_images/home-page-tablet-view.PNG">
+<hr>
+<br>
+<summary>Moblie View</summary>
+<img src="media/readme_images/home-page-mobile-view.PNG">
+
+
+</details>
+<details>
+<summary>Post Detail Page</summary>
+<br>
+<summary>Desktop View</summary>
+<img src="media/readme_images/post-detail-desktop-view.PNG">
+<hr>
+<br>
+<summary>Tablet View</summary>
+<img src="media/readme_images/post-detail-tablet-view.PNG">
+<hr>
+<br>
+<summary>Moblie View</summary>
+<img src="media/readme_images/post-detail-mobile-view.PNG">
+
+</details>
+<details>
+<summary>Create Post Page</summary>
+<br>
+<summary>Desktop View</summary>
+<img src="media/readme_images/create-post-desktop-view.PNG">
+<hr>
+<br>
+<summary>Tablet View</summary>
+<img src="media/readme_images/create-post-tablet-view.PNG">
+<hr>
+<br>
+<summary>Moblie View</summary>
+<img src="media/readme_images/post-detail-mobile-view.PNG">
+
+</details>
+<br>
 
 ## Features
 ### Home Page Post Display
@@ -59,11 +114,12 @@ The user first decides which option they would like to do, then a google sheet i
 - Post on the main page display the author, when the post was created and the heading of the post.
 - Post on the main page are clickable and can open up the Post Detail page.
  
-
-## Features
 ### Start Discussion
 - The Start Discussion feature allows users to create discussion posts.
 - This is where user can post and raise awarnes of issues in their area.
+
+### Join Discussion
+- A user can join a discussion by leaving a comment below the original dicussion post
 
 ### Post Detail View
 - When the post is clicked on the main page it opens the post detail view.
@@ -84,12 +140,6 @@ The user first decides which option they would like to do, then a google sheet i
 ### Login
 - This feature allows users to login into their unique account
 
-### feature6
-- The Exit option allows the user to end the program.
-
-## feature7
-- The input validation checks has the user entered valid data and the correct amount of digits.
-- If the incorrect amount of digits is entered the user an error message will be displayed in the terminal.
 
 ## Languages
 - Python 3
@@ -126,7 +176,7 @@ The user first decides which option they would like to do, then a google sheet i
 | Like Post | The user can like any post on the website |  Click the like button once to like it and a second time to unlike it | | Works as expected |
 | Comments | Users can read comments from other users and add their own comments | Add test comment and see if it has updated the database | | Works as expected |
 | Fill in feature here | Fill in action to resolve issue here |  Fill in expected result here |Fill in Actual result here |
-
+<br>
 
 ## Deployment
 Heroku was used for the deployment of this program.
@@ -142,6 +192,7 @@ Heroku was used for the deployment of this program.
 8. In the "Connect to GitHub, searh the desired repository
 9. Enable automatic deploys and then deploy branch
 10. Once deployed click on "View" to open aplication
+<br>
 
 ## Credits
 - Hero Image by Freepik: freepik.com
