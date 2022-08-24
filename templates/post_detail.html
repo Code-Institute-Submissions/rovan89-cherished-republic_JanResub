@@ -10,18 +10,16 @@
             <div class="col card mb-4  mt-3 left  top">
                 <div class="card-body">
                     <!-- The post content goes inside the card-text. -->
-                    <p class="card-text ">
+                    <div class="card-text ">
                         <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
                         <h1 class="post-title">{{ post.title }}</h1>
                         {{ post.content | safe }}
-                    </p>
+                    </div>
                     <div class="row d-flex">
-                        <strong>
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
-
                                     <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
                                         class="fas fa-heart"></i></button>
 
@@ -34,7 +32,6 @@
                                 <span class="text-secondary"><i class="far fa-heart"></i></span>
                             {% endif %}
                             <span class="text-secondary">{{ post.number_of_likes}}</span>
-                        </strong>
 
                         <div class="col-1">
                             {% with comments.count as total_comments %}
@@ -44,8 +41,8 @@
                             {% endwith %}
                         </div>
                         {% if user.is_authenticated %}
-                            <a type="button" class="btn btn-info m-2" href="/update_post/{{ post.id }}">Edit</a>
-                            <a type="button" class="btn btn-danger m-2" href="/delete_post/{{ post.id }}">Delete</a>
+                            <a class="btn btn-info m-2" href="/update_post/{{ post.id }}">Edit</a>
+                            <a class="btn btn-danger m-2" href="/delete_post/{{ post.id }}">Delete</a>
                         {% endif %}
                     </div>
                 </div>
