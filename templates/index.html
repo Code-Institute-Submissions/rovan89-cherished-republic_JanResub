@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block content %}
+{% block header %}
 <!-- Header image and text on home page -->
 <section>
     <div id="hero_image_container" class="d-none d-sm-block">
@@ -14,8 +14,9 @@
         </div>
     </div>
 </section>
+{% endblock %}
 
-
+{% block content %}
 
 <!-- User dicussion posts container -->
 <h1>Why not drop a comment and join the discussion</h1>
