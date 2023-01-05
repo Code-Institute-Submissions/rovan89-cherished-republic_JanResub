@@ -18,11 +18,15 @@
                     {% else %}
 
                         {% if user.is_authenticated %}
-                        <form method="POST">
-                            {% csrf_token %}
-                            {{ form | crispy}}
-                            <button type="submit" name="update_post_submit_btn">Update Post</button>
-                        </form>
+                            {% if user.id == post.author.id  %}
+                                <form method="POST">
+                                    {% csrf_token %}
+                                    {{ form | crispy}}
+                                    <button type="submit" name="update_post_submit_btn">Update Post</button>
+                                </form>
+                            {% else %}
+                            <p><strong>You do not have permissions on this page!</strong></p>
+                            {% endif %}
                         {% endif %}
                     {% endif %}
                 </div>
