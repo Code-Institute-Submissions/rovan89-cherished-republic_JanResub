@@ -40,6 +40,14 @@
                                         <h2>{{ post.title }}</h2>
                                     </div>
                                 </div>
+                                <div class="row m-2">
+                                    {% if  user.is_authenticated %}
+                                        {% if user.id == post.author.id  %}
+                                            <a class="btn btn-info m-2" href="/update_post/{{ post.id }}">Edit</a>
+                                            <a class="btn btn-danger m-2" href="/delete_post/{{ post.id }}">Delete</a>
+                                        {%  endif %}
+                                    {% endif %}
+                                </div>
                             </div>
                         </a>
                     </div>
