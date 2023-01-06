@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.contrib.auth.decorators import login_required
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.utils.text import slugify
@@ -19,7 +20,7 @@ class PostList(generic.ListView):
     template_name = "index.html"
     paginate_by = 6
 
-
+@login_required 
 def create_user_post(request):
     """
     This function allows a user to create a post,
