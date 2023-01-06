@@ -7,9 +7,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% block corecss %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    {% endblock %}
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Cherished Republic</title>
@@ -76,7 +79,7 @@
                 </div>
                 <!-- This is the side menu container -->
                 <div class="col-3 d-none d-lg-block p-2 m-2 justify-content-right bg-success">
-                    Help you community and start a discussion here.
+                    Help your community and start a discussion here.
                     <a class="btn btn-primary" href="{% url 'create_post' %}" role="button">Start Discussion</a>
                 </div>
             </div>
