@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     {% block corecss %}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
@@ -69,11 +69,11 @@
         {% endfor%}
     {% endif %}
     <!-- Overall Content Container -->
-    <div class="container-fluid my-4 ">
-        <div class="container ">
+    <div class="container-fluid" id="page-container">
+        <div class="container-fluid">
             <div class="row justify-content-center">
                 <!-- Main Content Container-->
-                <div class="col-12 col-lg-8 p-2 m-2 main-content-container-base-html bg-primary">
+                <div class="col-12 col-lg-8 p-2 m-2  main-content-container-base-html bg-primary">
                     {% block content %}
                     {% endblock content %}
                 </div>
@@ -84,52 +84,51 @@
                 </div>
             </div>
         </div>
+
+        <footer class="bg-dark text-center text-white">
+            <div class="col-sm-12">
+                <h5 class="uppercase general-sub pt-4">Cherished Republic</h5>
+                <p class="inline">
+                    Anyone can make a difference
+                </p>
+            </div>
+            <!-- Grid container -->
+            <div class="container-fluid p-4 pb-0">
+                <!-- Section: Social Media Icons -->
+                <section class="mb-4">
+                    <h3>Follow Us on Social</h3>
+                    <!-- Facebook -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" role="button" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- Twitter-->
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/home/" role="button" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" role="button" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <!-- Linkedin -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/" role="button" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                </section>
+
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-white" href="#">Cherished Republic</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
     </div>
-
-    <footer class="bg-dark text-center text-white">
-        <div class="col-sm-12">
-            <h5 class="uppercase general-sub pt-4">Cherished Republic</h5>
-            <p class="inline">
-                Anyone can make a difference
-            </p>
-        </div>
-        <!-- Grid container -->
-        <div class="container-fluid p-4 pb-0">
-            <!-- Section: Social Media Icons -->
-            <section class="mb-4">
-                <h3>Follow Us on Social</h3>
-                <!-- Facebook -->
-                <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" role="button" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <!-- Twitter-->
-                <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/home/" role="button" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                </a>
-
-                <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" role="button" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-
-                <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/" role="button" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-
-            </section>
-
-        </div>
-        <!-- Grid container -->
-
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2022 Copyright:
-        <a class="text-white" href="#">Cherished Republic</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-
     <!-- Font awsome -->
     <script src="https://kit.fontawesome.com/ee0e6c0285.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
