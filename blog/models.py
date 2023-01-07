@@ -6,17 +6,6 @@ from django.urls import reverse
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
-class Profile(models.Model):
-    """
-    This a cumstome user profile class.
-    """
-    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
-    bio = models.TextField(max_length=500, default='Enter your bio here')
-
-    def __str__(self):
-        return str(self.user)
-
-
 class Post(models.Model):
     """
     This is the model for a post.
