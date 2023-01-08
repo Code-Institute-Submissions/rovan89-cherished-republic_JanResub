@@ -9,7 +9,8 @@ class Profile(models.Model):
     """
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     bio = models.TextField(max_length=500, default='Enter your bio here')
-    full_name = models.CharField(max_length=50, null=True, blank=True)
+    first_name = models.CharField(max_length=50, null=True, blank=True)
+    last_name = models.CharField(max_length=50, null=True, blank=True)
     email = models.EmailField(max_length=254, null=True, blank=True)
     phone_number = models.CharField(max_length=20, null=True, blank=True)
 
