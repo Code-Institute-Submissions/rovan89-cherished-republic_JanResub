@@ -56,6 +56,7 @@ def update_user_post(request, post_id):
             return redirect('home')
     form = UserPostForm(instance=post)
     context = {
+        'post_author': post.author,
         'form': form
     }
     return render(request, 'update_post.html', context)
