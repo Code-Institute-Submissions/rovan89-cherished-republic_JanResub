@@ -20,9 +20,9 @@
                         We encourage constructive conversations to help better your local community. So please feel free to create a post and let's pull our community together.
                     </p>
                     <br>
-                    <small>Only Logged in Users Can Make Posts</small>
-
-                    <div>
+                    <p>Posting as: <strong>{{ user }}</strong></p>
+                    <small class="mb-5">Only Logged in Users Can Make Posts</small>
+                    <div class="mt-5">
                         <!-- Message alert when user creates a successful post -->
                         {% if posted %}
                         <div class="alert alert-success" role="alert">
@@ -33,7 +33,9 @@
                             {% if user.is_authenticated %}
                             <form method="POST">
                                 {% csrf_token %}
-                                {{ form | crispy}}
+                                {{ form.title | as_crispy_field }}
+                                {{ form.content | as_crispy_field }}
+                                {{ form.featured_image | as_crispy_field }}
                                 <button type="submit" name="create_post_submit_btn">Post</button>
                             </form>
                             {% endif %}
