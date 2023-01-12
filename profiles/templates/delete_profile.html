@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Are you sure you would like to delete your account? </h2>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit" class="bg-danger" class="btn btn-danger">Delete Account</button>
-    </form>
+<div class="container-fluid mt-2">
+    <div class="row justify-content-center">
+        <div class="genral-container text-center">
+            <h2>Are you sure you would like to delete your account? </h2>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn bg-danger" class="btn btn-danger">Delete Account</button>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
