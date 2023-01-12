@@ -6,6 +6,8 @@ from django.utils.text import slugify
 from django.contrib import messages
 from .models import Post
 from .forms import CommentForm, UserPostForm
+from profiles.models import Profile
+from django.contrib.auth.models import User
 
 
 class PostList(generic.ListView):
@@ -27,6 +29,7 @@ def create_user_post(request):
     and updates the database.
     """
     form = UserPostForm()
+
     context = {
         'form': form
     }
@@ -36,6 +39,9 @@ def create_user_post(request):
         if form.is_valid():
             user_form = form.save(commit=False)
             user_form.slug = slugify(user_form.title)
+            user_form.author = request.user
+            user_form.featured_image = request.POST['featured_image']
+            print("Request -->", request.POST['featured_image'])
             user_form.save()
             messages.success(request, "Your post was created successfully")
             return redirect('home')
@@ -55,6 +61,7 @@ def update_user_post(request, post_id):
             messages.success(request, "Your post was updated successfully")
             return redirect('home')
     form = UserPostForm(instance=post)
+    
     context = {
         'post_author': post.author,
         'form': form
