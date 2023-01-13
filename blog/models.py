@@ -30,17 +30,25 @@ class Post(models.Model):
     def __str__(self):
         return self.content
 
+    def show_image(self):
+        return self.featured_image
+
     def number_of_likes(self):
         return self.likes.count()
 
     def get_absolute_url(self):
         return reverse('home', args=(str(self.id)))
 
+    def user_id(self):
+        author_id = self.profile.user.id
+        return author_id
+
 
 class Comment(models.Model):
     """
     This is the model for comments.
     """
+    
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=100)
