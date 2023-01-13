@@ -60,7 +60,7 @@
                     <form action="{% url 'search_posts' %}" method="POST">
                         {% csrf_token %}
                         <input type="text" name="searched" placeholder="Search Posts">
-                        <button class="btn btn-outline-secondary" type="submit" name="search_btn">Search</button>
+                        <button class="btn btn-primary" type="submit" name="search_btn">Search</button>
                     </form>
                 </div>
             <div>
@@ -94,10 +94,10 @@
                     {% endblock content %}
                 </div>
                 <!-- This is the side menu container -->
-                <div class="col-3 d-none d-lg-block p-2 m-2 justify-content-right">
-                    Help your community and start a discussion here.
-                    <a class="btn btn-primary" href="{% url 'create_post' %}" role="button">Start Discussion</a>
-                </div>
+                    <div class="col-3 d-none d-lg-block p-2 m-4 justify-content-right start-discussion-container text-center">
+                        <h3>Help your community and start a discussion here.</h3>
+                        <a class="btn btn-primary" href="{% url 'create_post' %}" role="button">Start Discussion</a>
+                    </div>
             </div>
         </div>
 
