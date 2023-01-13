@@ -6,8 +6,6 @@ from django.utils.text import slugify
 from django.contrib import messages
 from .models import Post
 from .forms import CommentForm, UserPostForm
-from profiles.models import Profile
-from django.contrib.auth.models import User
 
 
 class PostList(generic.ListView):
