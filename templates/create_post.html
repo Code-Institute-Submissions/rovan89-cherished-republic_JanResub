@@ -31,7 +31,7 @@
                         {% else %}
                             <!-- Form for user posts -->
                             {% if user.is_authenticated %}
-                            <form method="POST">
+                            <form method="POST" enctype="multipart/form-data">
                                 {% csrf_token %}
                                 {{ form.title | as_crispy_field }}
                                 {{ form.content | as_crispy_field }}
