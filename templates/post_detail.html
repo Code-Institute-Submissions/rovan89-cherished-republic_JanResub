@@ -14,7 +14,7 @@
                     <div class="card-text ">
                         <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
                         <h1 class="post-title">{{ post.title }}</h1>
-                        {{ post.content | safe }}
+                        <p>{{ post.content | safe }}</p>
                     </div>
                     <div class="row d-flex">
                             {% if user.is_authenticated %}
