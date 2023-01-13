@@ -39,9 +39,8 @@ def create_user_post(request):
         if form.is_valid():
             user_form = form.save(commit=False)
             user_form.slug = slugify(user_form.title)
-            user_form.author = request.user
-            user_form.featured_image = request.POST['featured_image']
-            print("Request -->", request.POST['featured_image'])
+            user_form.author = request.user 
+            print("Request -->", request.POST)
             user_form.save()
             messages.success(request, "Your post was created successfully")
             return redirect('home')
