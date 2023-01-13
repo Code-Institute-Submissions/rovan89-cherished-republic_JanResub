@@ -17,17 +17,21 @@
     3. [Join Discussion](#join_discussion)
     4. [Post Detail View](#post_detail_view)
     5. [Registration](#registration)
-4. [User Input Validation](#user-input-validation)
+    6. [Login](#login)
+    7. [Update Profile](#updateprofile)
+    8. [Detele Account](#deteleaccount)
+4. [Models](#models)
 5. [Languages](#languages)
 6. [Frameworks and Tools](#frameworks-and-tools)
 7. [Bugs](#bugs)
 8. [Testing](#testing)
 9. [Deployment](#deployment)
-10. [Credits](#credits)
+10. [To Clone the Repository](#to_clone_the_repository)
+11. [Credits](#credits)
 
 ## Project Goals
 - To create a community driven site where people can come together and help thier local community become a better place.
-- To allow users to interact and organise event's, creat discussions about thier local area.
+- To allow users to interact and create discussions about thier local area.
 
 ### User Experience
 The user first decides which option they would like to do, then a google sheet is updated with the data. 
@@ -41,20 +45,19 @@ The user first decides which option they would like to do, then a google sheet i
 2. As a User I can create posts so that share my concerns about my local area
 3. As a User I can leave comments on posts so that I can voice my opinion
 4. As a User I can upvote posts so that so I can help raise awareness of posts I agree with
-5. As a User I can mark my comment as a "Solution" so that so that others can easily see this is a solution to the issue
-6. As a User I can view comments of others so that I can read the conversation
-7. As a User I can click on a post so that I can view the full text
-8. As a User I can register an account so that I can comment and like posts
-9. As a User I can create a community project so that other users can join and help solve the given issue
-10. As a User I can edit, update and delete posts so that I can manage my postings.
-11. As a Creator of a project I can create tasks in the project so that other users can assign themselves to a task
+5. As a User I can view comments of others so that I can read the conversation
+6. As a User I can click on a post so that I can view the full post in detail
+7. As a User I can register an account so that I can comment and like posts
+8. As a User I can create a community project so that other users can join and help solve the given issue
+9. As a User I can edit, update and delete posts so that I can manage my postings.
+10. As a Creator of a project I can create tasks in the project so that other users can assign themselves to a task
 
 ![Image User Stoies Project](media/readme_images/cherished-republic-board.PNG)
 ![Image User Stoies Project](media/readme_images/cherished-republic-user-stories.PNG)
 
 ### Business Owner Stories
 1. As a Site Admin I can create, read, update and delete posts so that I can manage my page content
-2. As a Site Admin I can approve projects so that the community is safe from spam and unwanted posts
+2. As a Site Admin I can approve posts so that the community is safe from spam and unwanted posts
 
 
 ## Design Choices
@@ -129,7 +132,6 @@ The user first decides which option they would like to do, then a google sheet i
     - Users can edit post
     - Users can delete posts
 
-
 ### Registration
 - User can use the register link in the nave bar to be directed to the register form.
 - To register the user must fill out the following feilds:
@@ -138,11 +140,22 @@ The user first decides which option they would like to do, then a google sheet i
     - Password
 
 ### Login
-- This feature allows users to login into their unique account
+- This feature allows users to login into their unique account.
 
+### Update Profile
+- This feature allows a user to edit or add extra content to their profile.
+
+### Detele Account
+- This feature allows the user to delete thier account.
+- This will also delete any posts the user may have created.
+
+## Models
+<img src="media/readme_images/models-diagram.png.PNG"> 
 
 ## Languages
 - Python 3
+- CSS
+- HTML 
 
 ## Frameworks and Tools
 - gitHub
@@ -193,6 +206,15 @@ Heroku was used for the deployment of this program.
 9. Enable automatic deploys and then deploy branch
 10. Once deployed click on "View" to open aplication
 <br>
+
+## To Clone the Repository
+- Navigate to the repository on GitHub
+- Click the Code Dropdown menu
+- Select your prefered option for cloning, HTTPS, SSH or Github CLI
+- Open Git Bash
+- Open a directory to store the project
+- Type git clone and Paste in the url of the project
+- Press Enter to clone the repository into the current directory 
 
 ## Credits
 - Hero Image by Freepik: freepik.com
