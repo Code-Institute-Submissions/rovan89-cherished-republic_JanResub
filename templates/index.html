@@ -19,7 +19,13 @@
 {% block content %}
 
     <!-- User dicussion posts container -->
-    <h1>Why not drop a comment and join the discussion</h1>
+    <div class="col-md-12 mt-2">
+        <div class="row">
+            <div class="card-body text-center post-list-heading">
+                <h1 class="text-uppercase">Join the discussion</h1>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 mt-1 mb-1">
@@ -38,6 +44,9 @@
                                     </div>
                                     <div>
                                         <h2>{{ post.title }}</h2>
+                                    </div>
+                                    <div>
+                                        <img src="{{ post.featured_image }}" alt="Girl in a jacket">
                                     </div>
                                 </div>
                                 <div class="row m-2">
