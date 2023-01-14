@@ -52,10 +52,10 @@ class Comment(models.Model):
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=100)
-    email = models.EmailField()
+    email = models.EmailField(blank=True)
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    likes = models.ManyToManyField(User, related_name='comment_likes')
+    likes = models.ManyToManyField(User, related_name='comment_likes', blank=True)
     approved = models.BooleanField(default=False)
 
     class Meta:
