@@ -45,9 +45,16 @@
                                     <div>
                                         <h2>{{ post.title }}</h2>
                                     </div>
-                                    <div>
-                                        <img src="{{ post.featured_image }}" alt="Girl in a jacket">
-                                    </div>
+                                    {% if post.featured_image.url  == 'https://res.cloudinary.com/dm5qcxgp4/image/upload/placeholder' %}
+                                        <div>
+                                            <img src="https://res.cloudinary.com/dm5qcxgp4/image/upload/v1673777251/noimage_cdxvyr.png" alt="">
+                                        </div>
+                                    {% else %}
+                                        <div>
+                                            <img src="{{ post.featured_image.url }}">
+                                        </div>
+                                        {{ post.featured_image.url }}
+                                    {% endif %}
                                 </div>
                                 <div class="row m-2">
                                     {% if  user.is_authenticated %}

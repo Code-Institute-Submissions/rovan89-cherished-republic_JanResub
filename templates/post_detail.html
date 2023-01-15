@@ -14,9 +14,15 @@
                     <div class="card-text ">
                         <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
                         <h1 class="post-title">{{ post.title }}</h1>
+                        {% if post.featured_image %}
+                            <div>
+                                <img src="{{ post.featured_image.url }}">
+                            </div>
+                        {% endif %}
+                        <br>
                         <p>{{ post.content | safe }}</p>
                     </div>
-                    <div class="row d-flex">
+                    <div class="row d-flex mt-5">
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                                 {% csrf_token %}
