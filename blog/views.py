@@ -33,7 +33,7 @@ def create_user_post(request):
     }
 
     if request.method == 'POST':
-        form = UserPostForm(request.POST)
+        form = UserPostForm(request.POST, request.FILES)
         if form.is_valid():
             user_form = form.save(commit=False)
             user_form.slug = slugify(user_form.title)
@@ -52,7 +52,7 @@ def update_user_post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
 
     if request.method == 'POST':
-        form = UserPostForm(request.POST, instance=post)
+        form = UserPostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             form.save()
             messages.success(request, "Your post was updated successfully")
