@@ -191,6 +191,16 @@ The user first decides which option they would like to do, then a google sheet i
 | Fill in feature here | Fill in action to resolve issue here |  Fill in expected result here |Fill in Actual result here |
 <br>
 
+### HTML
+- No errors returned when checking site through W3C Validator
+
+![Image of HTML validation](media/readme_images/HTML-testing.PNG)
+
+### CSS
+- No errors found when stie was run through W3C CSS Validator
+
+![Image of CSS validator](media/readme_images/CSS-testing.PNG)
+
 ## Deployment
 Heroku was used for the deployment of this program.
 1. In the workspace terminal command line: "pip3 freeze > requirements.txt"
